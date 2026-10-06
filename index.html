@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://www.instagram.com;">
   <meta name="description" content="KAIRO — a student-led college club for leadership. Students learn to lead by running real projects, events and teams. Join the circle." />
   <title>KAIRO — Built Through Action</title>
+  <link rel="preload" href="Asset/kairo-logo.png" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a href="#top" class="skip-link">Skip to main content</a>
   <div class="noise"></div>
 
   <div class="loading-screen" id="loadingScreen" aria-live="polite" aria-busy="true">

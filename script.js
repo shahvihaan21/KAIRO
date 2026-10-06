@@ -65,6 +65,7 @@ window.addEventListener("load", () => {
     // Add a small delay to ensure progress bar completes its aesthetic animation
     setTimeout(() => {
       loadingScreen.classList.add("hidden");
+      setTimeout(() => loadingScreen.remove(), 800); // Remove from DOM after fade transition
     }, 600);
   }
 });
