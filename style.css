@@ -39,7 +39,7 @@ img { max-width: 100%; }
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: var(--black);
+  background: #1C2833; /* Deep navy blue */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,20 +61,20 @@ img { max-width: 100%; }
   font-size: 3.5rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  color: var(--white);
+  color: #F4F6F6; /* Off-white */
   display: flex;
   align-items: center;
 }
 .loading-k {
-  color: #3b82f6;
-  background: linear-gradient(135deg, #60a5fa, #2563eb);
+  color: #F4F6F6;
+  background: linear-gradient(135deg, #F4F6F6, #2E4053); /* Off-white to Slate gray */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .progress-bar-container {
   width: 240px;
   height: 2px;
-  background: rgba(255, 255, 255, 0.1);
+  background: #2E4053; /* Slate gray */
   border-radius: 2px;
   overflow: hidden;
   position: relative;
@@ -85,14 +85,14 @@ img { max-width: 100%; }
   left: 0;
   height: 100%;
   width: 0;
-  background: linear-gradient(90deg, #60a5fa, #2563eb, #1d4ed8);
+  background: #F4F6F6; /* Off-white */
   animation: loadProgress 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 .loading-subtitle {
   font-size: 0.75rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--silver);
+  color: #F4F6F6;
   font-family: "Inter", sans-serif;
   opacity: 0.8;
   animation: fadeIn 0.5s ease-out 0.5s both;
