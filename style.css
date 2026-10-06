@@ -310,10 +310,21 @@ footer a[href="#top"] {
   .brand { width: 92px; }
   .nav {
     display: none; position: absolute; top: 88px; right: 20px; left: 20px;
-    padding: 20px; flex-direction: column; gap: 20px; background: rgba(12,15,19,.97);
-    border: 1px solid var(--line);
+    padding: 20px; flex-direction: column; gap: 20px; 
+    background: rgba(12, 15, 19, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
-  .nav.open { display: flex; }
+  .nav.open { 
+    display: flex; 
+    opacity: 1;
+    transform: translateY(0);
+  }
   .menu-toggle {
     display: block; position: absolute; right: 24px; width: 34px; height: 34px;
     background: none; border: 0; cursor: pointer;

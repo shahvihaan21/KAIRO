@@ -40,10 +40,20 @@ if (menuToggle && nav) {
 // so content never gets stuck invisible.)
 const revealEls = document.querySelectorAll(".reveal");
 if ("IntersectionObserver" in window) {
+  let revealDelay = 0;
+  let delayResetTimeout;
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+        }, revealDelay);
+        revealDelay += 100;
+        
+        clearTimeout(delayResetTimeout);
+        delayResetTimeout = setTimeout(() => { revealDelay = 0; }, 50);
+
         observer.unobserve(entry.target);
       }
     });
@@ -69,3 +79,4 @@ window.addEventListener("load", () => {
     }, 600);
   }
 });
+
