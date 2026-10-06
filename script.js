@@ -57,3 +57,14 @@ if ("IntersectionObserver" in window) {
 // Current year (only if the footer year element exists)
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// Loading Screen
+window.addEventListener("load", () => {
+  const loadingScreen = document.getElementById("loadingScreen");
+  if (loadingScreen) {
+    // Add a small delay to ensure progress bar completes its aesthetic animation
+    setTimeout(() => {
+      loadingScreen.classList.add("hidden");
+    }, 600);
+  }
+});
